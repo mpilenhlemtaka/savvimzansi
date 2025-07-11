@@ -14,7 +14,7 @@ class SavviMzansiApp extends StatelessWidget {
       title: 'SavviMzansi',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Poppins', // Set your custom font if configured
+        fontFamily: 'Poppins', // Set family for the entire app
         useMaterial3: true,
       ),
       home: const SplashScreen(),
