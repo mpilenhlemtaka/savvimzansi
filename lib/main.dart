@@ -14,11 +14,10 @@ class SavviMzansiApp extends StatelessWidget {
       title: 'SavviMzansi',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Poppins', // Set family for the entire app
+        fontFamily: 'Poppins',
         useMaterial3: true,
       ),
       home: const SplashScreen(),
     );
   }
 }
-
