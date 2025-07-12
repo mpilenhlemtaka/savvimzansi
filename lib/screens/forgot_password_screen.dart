@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+class ForgotPasswordScreen extends StatelessWidget {
+  const ForgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class RegisterScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Back arrow
+                // Back Arrow
                 IconButton(
                   icon: const Icon(Icons.arrow_back_ios, color: Color(0xFFE86E0A), size: 24),
                   onPressed: () => Navigator.pop(context),
@@ -24,7 +24,7 @@ class RegisterScreen extends StatelessWidget {
                 // Heading
                 Center(
                   child: Text(
-                    'Create your account',
+                    'Forgot your password?',
                     style: const TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 24,
@@ -38,7 +38,8 @@ class RegisterScreen extends StatelessWidget {
                 // Subheading
                 Center(
                   child: Text(
-                    'Sign up with one of the following options',
+                    'Enter your email and we’ll send you a reset link',
+                    textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
@@ -49,31 +50,13 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
 
-                // Name
-                const TextFieldLabel("Name"),
-                const RoundedInputField(),
-
-                const SizedBox(height: 16),
-
-                // Email
+                // Email Label & Input
                 const TextFieldLabel("Email"),
                 const RoundedInputField(),
 
-                const SizedBox(height: 16),
-
-                // Phone Number
-                const TextFieldLabel("Phone Number"),
-                const RoundedInputField(),
-
-                const SizedBox(height: 16),
-
-                // Password
-                const TextFieldLabel("Password"),
-                const RoundedInputField(obscureText: true),
-
                 const SizedBox(height: 32),
 
-                // Button
+                // Reset Password Button
                 SizedBox(
                   width: double.infinity,
                   height: 50,
@@ -86,11 +69,10 @@ class RegisterScreen extends StatelessWidget {
                       elevation: 0,
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, '/home');
-                      // Handle create account
+                      // Handle password reset
                     },
                     child: const Text(
-                      'OPEN AN ACCOUNT',
+                      'SEND RESET LINK',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600,
@@ -101,15 +83,15 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 24),
+                const SizedBox(height: 36),
 
-                // Login link
+                // Back to Login
                 Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        'Already have an account? ',
+                        'Remember your password? ',
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 14,
@@ -145,7 +127,7 @@ class RegisterScreen extends StatelessWidget {
   }
 }
 
-// Label above each input
+// Label for input fields
 class TextFieldLabel extends StatelessWidget {
   final String label;
   const TextFieldLabel(this.label, {super.key});
@@ -164,7 +146,7 @@ class TextFieldLabel extends StatelessWidget {
   }
 }
 
-// Rounded input fields
+// Reusable rounded input field
 class RoundedInputField extends StatelessWidget {
   final bool obscureText;
 
